@@ -4,7 +4,7 @@ const passport = require('passport');
 const OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 const pipedrive = require('pipedrive');
 var bodyParser = require('body-parser');
-require('dotenv').config()
+
 
 const api = require('./api');
 const config = require('./config');
@@ -23,9 +23,9 @@ passport.use(
 	new OAuth2Strategy({
 			authorizationURL: 'https://oauth.pipedrive.com/oauth/authorize',
 			tokenURL: 'https://oauth.pipedrive.com/oauth/token',
-			clientID: process.env.CLIID || '',
-			clientSecret:  process.env.CLISECRET || '',
-			callbackURL:  process.env.callbackURL || ''
+			clientID: config.clientID || '',
+			clientSecret: config.clientSecret || '',
+			callbackURL: config.callbackURL || ''
 		}, async (accessToken, refreshToken, profile, done) => {
 			const userInfo = await api.getUser(accessToken);
 			const user = await User.add(
