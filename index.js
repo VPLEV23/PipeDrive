@@ -23,7 +23,7 @@ passport.use(
 	new OAuth2Strategy({
 			authorizationURL: 'https://oauth.pipedrive.com/oauth/authorize',
 			tokenURL: 'https://oauth.pipedrive.com/oauth/token',
-			clientID:process.env.CLIID || '',
+			clientID: process.env.CLIID || '',
 			clientSecret:  process.env.CLISECRET || '',
 			callbackURL:  process.env.callbackURL || ''
 		}, async (accessToken, refreshToken, profile, done) => {
