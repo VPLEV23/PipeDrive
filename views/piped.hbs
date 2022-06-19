@@ -1,0 +1,56 @@
+
+    <div class="container">
+                     <div class="seacrh">
+                    <form action="/itemSearch">
+                        <input class="ser" type="text" placeholder="Search.." name="term" id="term">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+        <div class="row">
+            <div class="col">
+                <form action="/createdeal" method="POST" class="card">
+                    <h2>New Deal</h2>
+                    <div class="form-row">
+                        <div class="col">
+                                <input class="int" type="text" name="title" id="title" placeholder="Phone">
+                                <input class="int" type="text" name="" id="74ded781d89a8fa991907cd810c224064281df51" placeholder="Description">
+                                <input class="int" type="number" name="value" id="value" placeholder="Value">
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <select class="select" id="cars" name="cars" aria-placeholder="User">
+                                    <option value="" disabled selected>Select User</option>
+                                    <option value="{{name}}">Vlad</option>
+                                    <option value="{{name}}">Bal</option>
+                                </select>
+                                 <input class="btn_add" type="submit" value="Add Deal">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <h3 class="text-today">Today: {{sum}}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    {{#each piped}}
+                    <div class="row list-group-item"><strong>{{title}}</strong> (ID: {{id}}) {{description}}<b><i>{{value}} USD</i></b>
+                        <div class="col btns">
+                            <a class="check" href="/deals/won/{{id}}"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href=""><i class="fa-solid fa-pencil"></i></a>
+                            <a class="cancel" href="/deals/lost/{{id}}"><i class="fa-solid fa-circle-xmark"></i></a>
+                        </div>
+                    </div>
+                    <form action="/updeal/{{id}}" method="PUT" class="form_edit">
+                        <label for="titlen">Phone</label><br>
+                        <input type="text" name="titlen" id="titlen"><br>
+                        <label for="descn">Description</label><br>
+                        <input type="text" name="" id="descn"><br>
+                        <label for="valuen">Value</label><br>
+                        <input type="number" name="valuen" id="valuen"><br>
+                        <button type="submit">UPDATE DEAL</button>
+                    </form>
+                    {{/each}}
+            </div>
+        </div>
+    </div>

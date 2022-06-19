@@ -1,0 +1,32 @@
+{
+  "name": "Simple FrontEnd",
+  "version": "1.0.0",
+  "description": "App for pipedrive Marketplace",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Vlad",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.16.2",
+    "hbs": "^4.1.1",
+    "knex": "^0.21.1",
+    "passport": "^0.4.0",
+    "passport-oauth": "^1.0.0",
+    "pipedrive": "^15.0.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "sqlite3": "^4.2.0"
+  }
+}

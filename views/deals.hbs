@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Oh hi, {{name}}</h1>
+                <form action="/createdeal" method="POST">
+                <label for ="title">Phone</label><br>
+                <input type="text" name="title" id="title"><br>
+                <label for ="desc">Description</label><br>
+                <input type="text" name="" id="desc"><br>
+                <label for ="value">Value</label><br>
+                <input type="number" name="value" id="value"><br>
+                <button type="submit">CREATE DEAL</button>
+            </form>
+            <div class="seacrh">
+             <form action="/itemSearch">
+            <input class="ser" type="text" placeholder="Search.."name="term" id="term"> 
+            <button type="submit"><i class="fa fa-search"></i></button>
+             </form>
+            </div>
+            <h3>Pick a deal:</h3>
+            <h3>Summary: {{sum}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="list-group">
+                {{#each deals}}
+                    <a href="#" class="list-group-item"><strong>{{title}}</strong> (ID: {{id}}) <strongDescription: {{desc}}strong>
+                    <div class="btns">
+                      <a class="green_link" href="/deals/won/{{id}}">WON</a>
+                      <a href="">EDIT</a>
+                      <a href="/deals/lost/{{id}}">LOST</a>
+                    </div>
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+.jumbotron {
+    height: 100vh;
+    opacity: 0;
+    animation: reveal 4s forwards;
+}
+.btn_add{
+    background: green;
+    border: 1px solid #000;
+    height: 50px;
+    color: #fff;
+    width: 150px;
+    margin-top: 40px;
+}
+.card .form-row >div{
+    display: inline-flex;
+}
+.card .form-row >div .int:first-child{
+    margin-left: 0px;
+}
+.card .form-row >div .int{
+    height: 45px;
+    margin-left: 45px;
+}
+.card .form-row >div .form-group .select{
+    height: 45px;
+    width: 150px;
+    margin-left: 15px;
+}
+a {
+    display: block;
+}
+
+.outcome-won {
+    background-color: green !important;
+}
+
+.outcome-lost {
+    background-color: red !important;
+}
+.outcome-new{
+    background-color: #555 !important;
+}
+.outcome-open{
+    background-color: #555 !important;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btns {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.btns a {
+    margin-left: 30px;
+
+}
+.text-today{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.check{
+    color: green;
+}
+.cancel{
+    color: red
+}
+
+.green-link {
+    color: green !important;
+}
+
+.btns a:nth-child(4) {
+    color: red;
+}
+
+.seacrh {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-top: 15px;
+    border-radius: 50px;
+}
+.seacrh .ser{
+    border-radius: 10px;
+    width: 200px;
+}
+.form_edit{
+    display: none;
+}
+.list-group-item{
+    margin-top: 15px;
+}
